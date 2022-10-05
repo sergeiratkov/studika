@@ -1,64 +1,86 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style1.css">
+  <script type="text/javascript" src="script1.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="script.js"></script>
-  <title>СТУДИКА</title>
+  <title>Document</title>
 </head>
 
 <body>
   <header>
     <section class="header">
-      <a href="#" target="_blank"><img src="img/logo.jpg" alt="logo" class="logo-pic"></a>
-      <div class="menu">
-        <div class="area-button" id="area-button">
-          <div class="list">
-            <img src="img/city.png" alt="city" class="city-pic">
-            <li class="m">Москва</li>
-          </div>
-        </div>
+      <div class="area-button" id="area-button">
+        <a href="#"><img src="img/logo.jpg" alt="logo" class="logo-pic"></a>
+        <img src="img/city.png" alt="city" class="city-pic">
+        <p class="m">Москва</p>
       </div>
 
+      <!-- SUB MENU -->
       <div class="sublist" id="area-selector">
-        <input type="text" placeholder="Регион, город, населенный пункт" class="s">
-        <buton class="btn">&#x2716</buton>
+        <div class="input-search">
+          <input type="text" placeholder="Регион, город, населенный пункт" class="s">
+          <!-- <buton class="btn">&#x2716</buton> -->
+        </div>
         <div class="select">
-          <div class="select-city">
-            <p class="o">Россия</p>
-            <buton class="btn1">&#x2716</buton>
-          </div>
-          <div class="select-city">
-            <p class="o">Ленинградская область</p>
-            <buton class="btn1">&#x2716</buton>
-          </div>
+        
         </div>
+
         <div class="area-list" id="area-list">
-          <li class="city1">Россия</li>
-          <li class="city1">Ленинградская область</li>
-          <li class="city1">Кемеровская область</li>
-          <li class="city1">Калининградская область</li>
-          <li class="city1">Волгоградская область</li>
-          <li class="city1">Вологодская область</li>
+     
         </div>
+        <div class="save">Сохранить</div>
       </div>
+      <!-- END SUB MENU -->
+
 
       <div class="search">
         <img src="img/union.png" alt="union" class="union">
-        <input type="text" placeholder="Учебное заведение, специальность или профессия" class="input">
+        <input type="text" placeholder="Регион, город, населенный пункт" class="s">
+        <buton class="btn">&#x2716</buton>
       </div>
       <div class="like">
         <img src="img/heart.png" alt="heart" class="heart">
         <h1>1</h1>
-      </div>
-      <div class="name">
-        <h1>Екатерина</h1>
+        <h1 class="e">Екатерина</h1>
         <img src="img/avatar.png" alt="avatar" class="avatar">
       </div>
     </section>
+    <!-- burger -->
+
+
+    <div class="container">
+      <div class="bb">
+        <button class="modal-button">&#x2716</button>
+      </div>
+      <input type="checkbox" id="burger">
+      <label for="burger"> &#x39E</label>
+
+      <div class="sublist1">
+
+        <div class="inter">
+          <button class="inter-button">Войти</button>
+        </div>
+        <div class="navigation">
+          <div class="">
+            <p>Город или регион</p>
+            <li class="m-s">Москва</li>
+          </div>
+          <img src="img/city.png" alt="city" class="city-pic-s">
+        </div>
+        <div class="education">
+          <p>высшее</p>
+          <p>среднее</p>
+        </div>
+        <div class="educational establishments"></div>
+      </div>
+    </div>
+   
+    <!-- burger -->
+
 
     <div class="nav">
       <ul class="ul">
@@ -73,35 +95,8 @@
         <li class="b">Тест на профориентацию <img src="img/vector.png" alt="" class="vector"></li>
       </ul>
     </div>
-    <!--BURGER-->
-    <div class="container">
-      <input type="checkbox" id="burger">
-      <label for="burger"> &#x39E</label>
-      <div class="sublist" id="area-selector">
-        <form action="input" class="input2">
-          <input type="text" placeholder="Регион, город, населенный пункт" class="s">
-          <buton class="btn">&#x2716</buton>
-        </form>
-        <div class="select">
-          <form action="" class="form1">
-            <button class="chec"></button>
-            <buton class="btn1">&#x2716</buton>
-          </form>
-        </div>
-
-        <div class="area-list" id="area-list">
-          <li class="city1">Россия</li>
-          <li class="city1">Ленинградская область</li>
-          <li class="city1">Кемеровская область</li>
-          <li class="city1">Калининградская область</li>
-          <li class="city1">Волгоградская область</li>
-          <li class="city1">Вологодская область</li>
-        </div>
-      </div>
-
-    </div>
-    <!-- BURGER END -->
   </header>
+
 </body>
 
 </html>
