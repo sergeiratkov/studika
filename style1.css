@@ -136,6 +136,18 @@ header {
   margin-right: 8px;
 }
 
+.m {
+  width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  cursor: pointer;
+  margin-right: calc(15px + (61 - 15) * (100vw - 1216px) / ((1920 - 1216)));
+}
+
+
+
 .area-button {
   display: flex;
   flex: 1;
@@ -343,6 +355,10 @@ ul,
   .like {
     flex: 1;
   }
+
+  .m {
+    max-width: 70px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -350,8 +366,8 @@ ul,
   .select,
   .bb,
   .s1,
-  .btn,
   .m,
+  .btn,  
   .area-list,
   .city-pic,
   .search,
@@ -364,13 +380,15 @@ ul,
     left: -40px;
     position: relative;
     top: -120px;
+  }
 
-
+  .header {
+    height: 54px;
   }
 
   label {
     position: absolute;
-    top: 60px;
+    top: 40px;
     left: 40px;
   }
 

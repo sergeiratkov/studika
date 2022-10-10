@@ -148,27 +148,29 @@ header {}
   cursor: pointer;
 }
 
-.menu {}
-
 .area-button {
   display: flex;
+  
 }
 
-.list {
+/* .list {
   display: flex;
   align-items: center;
-}
+} */
 
 .city-pic {
   margin-right: 6px;
 }
 
-.list:hover .city-pic {
+/* .list:hover .city-pic {
   background: #d8d8d8;
   border-radius: 40px;
-}
+} */
 
-.m {
+p.m {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   position: relative;
   cursor: pointer;
   margin-right: calc(15px + (61 - 15) * (100vw - 1216px) / ((1920 - 1216)));
@@ -333,10 +335,6 @@ header {}
   background-size: cover;
   border-radius: 100px;
 }
-
-.chec {}
-
-
 
 /* button {
   padding: 16px 16px 16px 16px;

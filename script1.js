@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", starter);
 function starter() {
   areaSelectorHandler();
   areaRequest();
-  // copiText()
+  inputSearchStart()
   clickButtonSave()
 }
 
@@ -43,20 +43,50 @@ function areaItemClick(event) {//'это событие, элемент нахо
   div.append(chips);
 }
 function copiText(nameCity) {
-  
-  nameCity = name.textСontent 
-  console.log(name)
+
+  nameCity = textСontent
+  // console.log()
 }
 
 function clickButtonSave() {
-const div = document.querySelector(".save")
-function click () {
-  let name = document.querySelectorAll(".select-city p");
-  console.log(name)
+  const div = document.querySelector(".save")
+  function click() {
+    let name = document.querySelectorAll(".select-city p");
+    let div = document.querySelector(".area-button .m");
+    let result = "";
+    name.forEach(function (node) {
+      let p = node.textContent;
+      if (result === "") { result = p } else { result = result + "," + p }
+    })
+    if (result === "") { result = "Любой регион" }
+    div.textContent = result
+    const areaSelector = document.getElementById("area-selector");
+    areaSelector.classList.toggle("area-selector-show");
+  }
+  div.addEventListener("click", click)
 }
-div.addEventListener("click", click)
 
+function search() {
+  let list = document.querySelectorAll(".city1")
+  let input = document.querySelector(".input-search input")
+  let filter = input.value.toUpperCase();
+  console.log(filter)
+  list.forEach(function (li) {
+    if (li.textContent.toUpperCase().indexOf(filter) > -1) {
+      li.style.display = "";
+    } else {
+      li.style.display = "none";
+    }
+    console.log()
+  })
 }
+function inputSearchStart(){
+  let input = document.querySelector(".input-search")
+  input.addEventListener('keyup', search)
+}
+
+
+
 
 // function array() {
 //   let arrayItem = document.querySelectorAll(".city1");
@@ -113,4 +143,3 @@ function creatLi(itemName, cityName) {
   li.addEventListener("click", areaItemClick);
   return li;
 }
-
