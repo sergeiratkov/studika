@@ -32,6 +32,7 @@ function createChips(text) {
     div.parentNode.removeChild(div);
   }
   button.addEventListener("click", closeSelectCity);
+
   return div;
 }
 
@@ -40,13 +41,26 @@ function areaItemClick(event) {//'это событие, элемент нахо
   let nameCity = event.currentTarget.firstChild.textContent;
   let chips = createChips(nameCity);
   let div = document.querySelector(".select");
-  div.append(chips);
+  let elements = div.childNodes
+  let nashliElement = false;
+  let delCips = undefined;
+  // let result = Array.prototype.find.call(elements, function (child) {
+  //       return (child.firstChild.textContent === nameCity)
+  //     })
+  elements.forEach(function (child) {
+    if (child.firstChild.textContent === nameCity) {
+      nashliElement = true
+      delCips = child
+    }
+  })
+  if (nashliElement === true) {
+    div.removeChild(delCips)
+  } else {
+    div.append(chips);
+  }
 }
-function copiText(nameCity) {
 
-  nameCity = textСontent
-  // console.log()
-}
+
 
 function clickButtonSave() {
   const div = document.querySelector(".save")
@@ -56,14 +70,14 @@ function clickButtonSave() {
     let result = "";
     name.forEach(function (node) {
       let p = node.textContent;
-      if (result === "") { result = p } else { result = result + "," + p }
+      if (result === "") { result = p } else { result = result + ", " + p }
     })
     if (result === "") { result = "Любой регион" }
     div.textContent = result
     const areaSelector = document.getElementById("area-selector");
     areaSelector.classList.toggle("area-selector-show");
   }
-  div.addEventListener("click", click)
+  div.addEventListener("click", click);
 }
 
 function search() {
@@ -80,7 +94,8 @@ function search() {
     console.log()
   })
 }
-function inputSearchStart(){
+
+function inputSearchStart() {
   let input = document.querySelector(".input-search")
   input.addEventListener('keyup', search)
 }
